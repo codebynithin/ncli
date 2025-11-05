@@ -16,10 +16,13 @@ const merge = async (values) => {
     execSync('git pull', { stdio: 'inherit' });
     execSync(`git checkout ${source}`, { stdio: 'inherit' });
     execSync('git pull', { stdio: 'inherit' });
-    execSync(`git checkout ${target}`, { stdio: 'inherit' });
-    execSync('git pull', { stdio: 'inherit' });
-    execSync(`git merge ${source}`, { stdio: 'inherit' });
-    execSync('git push', { stdio: 'inherit' });
+
+    for (const branch of target.split(' ')) {
+      execSync(`git checkout ${branch}`, { stdio: 'inherit' });
+      execSync('git pull', { stdio: 'inherit' });
+      execSync(`git merge ${source} --no-edit`, { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+    }
 
     console.log('\n✓ Merge completed successfully!');
   } catch (error) {
