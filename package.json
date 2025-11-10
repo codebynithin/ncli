@@ -1,11 +1,11 @@
 {
-  "name": "@codebynithin/nithin-utils",
-  "version": "1.5.2",
-  "description": "Nithin utilities cli",
+  "name": "@codebynithin/ncli",
+  "version": "1.0.0",
+  "description": "Nithin cli",
   "main": "index.js",
   "author": "Nithin V <mails2nithin@gmail.com>",
   "bin": {
-    "nu": "index.js"
+    "ncli": "index.js"
   },
   "scripts": {
     "start": "node index",
@@ -17,12 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codebynithin/nithin-utils.git"
+    "url": "git+https://github.com/codebynithin/ncli.git"
   },
   "keywords": [
     "nithin",
     "utils",
     "cli",
+    "ncli",
     "merge",
     "review",
     "build",
@@ -30,9 +31,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codebynithin/nithin-utils/issues"
+    "url": "https://github.com/codebynithin/ncli/issues"
   },
-  "homepage": "https://github.com/codebynithin/nithin-utils#readme",
+  "homepage": "https://github.com/codebynithin/ncli#readme",
   "dependencies": {
     "@google/generative-ai": "~0.24.1",
     "axios": "~1.12.2",
