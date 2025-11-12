@@ -1,7 +1,7 @@
 {
   "name": "ncli",
-  "version": "1.0.1",
-  "description": "Nithin cli",
+  "version": "0.0.1",
+  "description": "Nithin command line interface",
   "main": "index.js",
   "author": "Nithin V <mails2nithin@gmail.com>",
   "bin": "index.js",
