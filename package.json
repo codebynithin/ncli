@@ -1,5 +1,5 @@
 {
-  "name": "ncli",
+  "name": "cbncli",
   "version": "0.0.1",
   "description": "Nithin command line interface",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/codebynithin/ncli.git"
   },
   "keywords": [
-    "ncli",
+    "cbncli",
     "nithin",
     "utils",
     "nithin-utils",
