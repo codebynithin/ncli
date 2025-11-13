@@ -1,5 +1,5 @@
 {
-  "name": "cbncli",
+  "name": "nitor",
   "version": "0.0.1",
   "description": "Nithin command line interface",
   "main": "index.js",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codebynithin/ncli.git"
+    "url": "git+https://github.com/codebynithin/nitor.git"
   },
   "keywords": [
-    "cbncli",
+    "nitor",
     "nithin",
     "utils",
     "nithin-utils",
@@ -31,9 +31,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codebynithin/ncli/issues"
+    "url": "https://github.com/codebynithin/nitor/issues"
   },
-  "homepage": "https://github.com/codebynithin/ncli#readme",
+  "homepage": "https://github.com/codebynithin/nitor#readme",
   "dependencies": {
     "@google/generative-ai": "~0.24.1",
     "axios": "~1.12.2",
