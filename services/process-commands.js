@@ -140,22 +140,22 @@ Options:
   -r, --repository <repository name>  repository name
   
 Repository list:
-  portalClient
-  portalBackend
-  portalDeployment
-  portalAutomation
+  centralAuth
+  configService
   gatewayBackend
   gatewayClient
   gatewayDeployment
-  phrClient
-  phrBackend
-  phrDeployment
-  configService
   healthRecords
-  centralAuth
   mpi
   phrAdminBackend
   phrAdminClient
+  phrBackend
+  phrClient
+  phrDeployment
+  portalAutomation
+  portalBackend
+  portalClient
+  portalDeployment
   terminologyService`);
 
           return;
@@ -263,13 +263,14 @@ Note: This operation cannot be undone. Make sure you have pushed any important c
         \t[${ACTIONS.CLEANUP}]\n
 Available commands:\n
   build         : Build specified components
-  deploy        : Deploy specified components
   build-deploy  : Build and then deploy
-  create-branch : Create git branch
-  review        : AI Review specified merge request
-  refactor      : REFACTOR the provided text for improved clarity, conciseness, and professional quality.
-  merge         : Merge source branch into target branch
   cleanup       : Cleanup local git branches (checkout to master and delete all other branches)
+  completion    : Setup shell autocomplete
+  create-branch : Create git branch
+  deploy        : Deploy specified components
+  merge         : Merge source branch into target branch
+  refactor      : REFACTOR the provided text for improved clarity, conciseness, and professional quality.
+  review        : AI Review specified merge request
   version       : Show version info
   help          : Show help
 
@@ -277,13 +278,13 @@ For details of each actions run 'nitor <action> -help'
 
 Example usage:\n
   nitor build -project <project> -components <components> -instance <instance>
-  nitor deploy -project <project> -components <components> -instance <instance>
   nitor build-deploy -project <project> -components <components> -instance <instance>
-  nitor create-branch -task <task number> -type <feat|fix> -description <description> -project <project short name>
-  nitor review -project <project short name> -mergeId <merge id> -repository <repository name>
-  nitor refactor <text>
-  nitor merge -source <source branch> -target <target branch>
   nitor cleanup
+  nitor create-branch -task <task number> -type <feat|fix> -description <description> -project <project short name>
+  nitor deploy -project <project> -components <components> -instance <instance>
+  nitor merge -source <source branch> -target <target branch>
+  nitor refactor <text>
+  nitor review -project <project short name> -mergeId <merge id> -repository <repository name>
 
 Running 'nitor help' will list available subcommands and provide some conceptual guides.`);
         break;

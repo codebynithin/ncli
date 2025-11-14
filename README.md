@@ -41,6 +41,21 @@ A CLI utility toolkit for automating and managing build, deploy, and status oper
   - `BACKUP_CONFIG` - Backup configuration
   - `RESTORE_CONFIG` - Restore configuration
 
+## Installation
+
+After installing the package globally, you can enable autocomplete:
+
+```bash
+nitor completion
+```
+
+This will add autocomplete support to your shell. Restart your terminal or run:
+
+```bash
+source ~/.bashrc  # for bash
+source ~/.zshrc   # for zsh
+```
+
 ## Usage
 
 You can use the CLI via the `nitor` command:
@@ -48,6 +63,14 @@ You can use the CLI via the `nitor` command:
 ```bash
 nitor <command> [options]
 ```
+
+### Autocomplete
+
+Once enabled, you can use Tab to autocomplete:
+
+- Commands (build, deploy, cleanup, etc.)
+- Options (-project, -components, etc.)
+- Values (portal, gateway, dev, qa, etc.)
 
 ### Example Commands
 
