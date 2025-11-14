@@ -8,6 +8,7 @@ const { mrAIReview } = require('./review');
 const { refactor } = require('./refactor');
 const { backup } = require('./mongodb-backup');
 const { merge } = require('./merge');
+const { cleanup } = require('./cleanup');
 
 const processArgs = async (type, value) => {
   try {
@@ -16,6 +17,7 @@ const processArgs = async (type, value) => {
     if (
       type !== ACTIONS.HELP &&
       type !== ACTIONS.VERSION &&
+      type !== ACTIONS.CLEANUP &&
       !value.includes('--h') &&
       !value.includes('-help')
     ) {
@@ -224,6 +226,26 @@ This command will:
         break;
       }
 
+      case ACTIONS.CLEANUP: {
+        if (value === '-help' || value === '--h') {
+          console.log(`usage: \tnu cleanup
+
+Cleanup local git branches
+
+This command will:
+  1. Checkout to master (or main) branch
+  2. Delete all other local branches
+
+Note: This operation cannot be undone. Make sure you have pushed any important changes.`);
+
+          return;
+        }
+
+        await cleanup();
+
+        break;
+      }
+
       case ACTIONS.VERSION: {
         const path = require('path');
         const packageJson = require(path.resolve(__dirname, '../package.json'));
@@ -237,7 +259,8 @@ This command will:
       case ACTIONS.HELP: {
         console.log(`usage: nitor \t[${ACTIONS.VERSION}] [${ACTIONS.HELP}]
         \t[${ACTIONS.BUILD}] [${ACTIONS.DEPLOY}] [${ACTIONS.BUILD_DEPLOY}]
-        \t[${ACTIONS.CREATE_BRANCH}] [${ACTIONS.REVIEW}] [${ACTIONS.MERGE}]\n
+        \t[${ACTIONS.CREATE_BRANCH}] [${ACTIONS.REVIEW}] [${ACTIONS.MERGE}]
+        \t[${ACTIONS.CLEANUP}]\n
 Available commands:\n
   build         : Build specified components
   deploy        : Deploy specified components
@@ -246,6 +269,7 @@ Available commands:\n
   review        : AI Review specified merge request
   refactor      : REFACTOR the provided text for improved clarity, conciseness, and professional quality.
   merge         : Merge source branch into target branch
+  cleanup       : Cleanup local git branches (checkout to master and delete all other branches)
   version       : Show version info
   help          : Show help
 
@@ -259,6 +283,7 @@ Example usage:\n
   nitor review -project <project short name> -mergeId <merge id> -repository <repository name>
   nitor refactor <text>
   nitor merge -source <source branch> -target <target branch>
+  nitor cleanup
 
 Running 'nitor help' will list available subcommands and provide some conceptual guides.`);
         break;

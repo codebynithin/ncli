@@ -1,14 +1,15 @@
 module.exports = {
   ACTIONS: {
-    BUILD: 'build',
-    DEPLOY: 'deploy',
-    BUILD_DEPLOY: 'build-deploy',
-    VERSION: 'version',
-    HELP: 'help',
-    CREATE_BRANCH: 'create-branch',
-    REVIEW: 'review',
-    REFACTOR: 'refactor',
     BACKUP: 'backup',
+    BUILD_DEPLOY: 'build-deploy',
+    BUILD: 'build',
+    CLEANUP: 'cleanup',
+    CREATE_BRANCH: 'create-branch',
+    DEPLOY: 'deploy',
+    HELP: 'help',
     MERGE: 'merge',
+    REFACTOR: 'refactor',
+    REVIEW: 'review',
+    VERSION: 'version',
   },
 };
