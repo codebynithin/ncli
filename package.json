@@ -1,6 +1,6 @@
 {
   "name": "nitor",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Nithin command line interface",
   "main": "index.js",
   "author": "Nithin V <mails2nithin@gmail.com>",
