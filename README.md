@@ -23,22 +23,23 @@ A CLI utility toolkit for automating and managing build, deploy, and status oper
 - AI text refactoring
 - Backup and restore MongoDB
 - Merge git branches
+- Cleanup local git branches
 
 ## Requirements
 
 - Node.js >= 14.x
 - npm >= 6.x
 - A properly configured `.env.nu` file in your `~/Desktop` directory with required tokens and URLs:
-  - `CSRF_TOKEN`
-  - `COOKIE`
-  - `ORIGIN`
-  - `GITLAB_TOKEN`
-  - `MR_PROMPT`
-  - `MR_LANG`
-  - `AI_API_KEY`
-  - `AI_MODEL`
-  - `BACKUP_CONFIG`
-  - `RESTORE_CONFIG`
+  - `CSRF_TOKEN` - CSRF token for Gitlab (Copy from browser)
+  - `COOKIE` - Cookie for Gitlab (Copy from browser)
+  - `ORIGIN` - Origin for Gitlab website url, eg: `https://gitlab.com/`
+  - `GITLAB_TOKEN` - Gitlab token
+  - `MR_PROMPT` - Merge request prompt
+  - `MR_LANG` - Merge request language
+  - `AI_API_KEY` - AI API key
+  - `AI_MODEL` - AI model
+  - `BACKUP_CONFIG` - Backup configuration
+  - `RESTORE_CONFIG` - Restore configuration
 
 ## Usage
 
@@ -86,6 +87,10 @@ nitor <command> [options]
   ```bash
   nitor merge -source <source branch> -target <target branch>
   ```
+- **Cleanup:**
+  ```bash
+  nitor cleanup
+  ```
 
 ### Command Reference
 
@@ -101,6 +106,7 @@ nitor <command> [options]
 - `backup` : Backup specified projects
 - `restore` : Restore specified projects
 - `merge` : Merge source branch into target branch
+- `cleanup` : Cleanup local git branches (checkout to master and delete all other branches)
 
 ### Options
 

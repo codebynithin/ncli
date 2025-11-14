@@ -16,3 +16,11 @@ We are pleased to announce the first official release of **Nitor**.
 - Scriptable and extensible for automation and integration into larger workflows.
 
 For a complete list of changes and discussion, see [Issue #1](https://github.com/codebynithin/nitor/issues/1).
+
+## [1.1.0] - 2025-11-14
+
+### New Features
+
+- Added cleanup command to delete all local branches except master/main.
+
+- [Issue #6](https://github.com/codebynithin/nitor/issues/6)
