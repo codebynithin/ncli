@@ -1,4 +1,4 @@
-# @codebynithin/nithin-utils
+# nitor
 
 <a name="readme-top"></a>
 
@@ -42,49 +42,49 @@ A CLI utility toolkit for automating and managing build, deploy, and status oper
 
 ## Usage
 
-You can use the CLI via the `nu` command:
+You can use the CLI via the `nitor` command:
 
 ```bash
-nu <command> [options]
+nitor <command> [options]
 ```
 
 ### Example Commands
 
 - **Build:**
   ```bash
-  nu build -project <project name> -components <component name> -instance <instance name>
+  nitor build -project <project name> -components <component name> -instance <instance name>
   ```
 - **Deploy:**
   ```bash
-  nu deploy -project <project name> -components <component name> -instance <instance name>
+  nitor deploy -project <project name> -components <component name> -instance <instance name>
   ```
 - **Build & Deploy:**
   ```bash
-  nu build-deploy -project <project name> -components <component name> -instance <instance name>
+  nitor build-deploy -project <project name> -components <component name> -instance <instance name>
   ```
 - **Create branch:**
   ```bash
-  nu create-branch -task <task number> -type <feat|fix> -description <description> -repository <repository name>
+  nitor create-branch -task <task number> -type <feat|fix> -description <description> -repository <repository name>
   ```
 - **Review:**
   ```bash
-  nu review -project <project short name> -mergeId <merge id> -repository <repository name>
+  nitor review -project <project short name> -mergeId <merge id> -repository <repository name>
   ```
 - **Refactor Text:**
   ```bash
-  nu refactor <text>
+  nitor refactor <text>
   ```
 - **Backup:**
   ```bash
-  nu backup <text>
+  nitor backup <text>
   ```
 - **Restore:**
   ```bash
-  nu restore <text>
+  nitor restore <text>
   ```
 - **Merge:**
   ```bash
-  nu merge -source <source branch> -target <target branch>
+  nitor merge -source <source branch> -target <target branch>
   ```
 
 ### Command Reference

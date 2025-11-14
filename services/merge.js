@@ -5,7 +5,7 @@ const merge = async (values) => {
 
   if (!source || !target) {
     console.error('Error: Both -source and -target branch parameters are required');
-    console.log('Usage: nu merge -source <source branch> -target <target branch>');
+    console.log('Usage: nitor merge -source <source branch> -target <target branch>');
     return;
   }
 

@@ -235,7 +235,7 @@ This command will:
       }
 
       case ACTIONS.HELP: {
-        console.log(`usage: nu \t[${ACTIONS.VERSION}] [${ACTIONS.HELP}]
+        console.log(`usage: nitor \t[${ACTIONS.VERSION}] [${ACTIONS.HELP}]
         \t[${ACTIONS.BUILD}] [${ACTIONS.DEPLOY}] [${ACTIONS.BUILD_DEPLOY}]
         \t[${ACTIONS.CREATE_BRANCH}] [${ACTIONS.REVIEW}] [${ACTIONS.MERGE}]\n
 Available commands:\n
@@ -249,23 +249,23 @@ Available commands:\n
   version       : Show version info
   help          : Show help
 
-For details of each actions run 'nu <action> -help'
+For details of each actions run 'nitor <action> -help'
 
 Example usage:\n
-  nu build -project <project> -components <components> -instance <instance>
-  nu deploy -project <project> -components <components> -instance <instance>
-  nu build-deploy -project <project> -components <components> -instance <instance>
-  nu create-branch -task <task number> -type <feat|fix> -description <description> -project <project short name>
-  nu review -project <project short name> -mergeId <merge id> -repository <repository name>
-  nu refactor <text>
-  nu merge -source <source branch> -target <target branch>
+  nitor build -project <project> -components <components> -instance <instance>
+  nitor deploy -project <project> -components <components> -instance <instance>
+  nitor build-deploy -project <project> -components <components> -instance <instance>
+  nitor create-branch -task <task number> -type <feat|fix> -description <description> -project <project short name>
+  nitor review -project <project short name> -mergeId <merge id> -repository <repository name>
+  nitor refactor <text>
+  nitor merge -source <source branch> -target <target branch>
 
-Running 'nu help' will list available subcommands and provide some conceptual guides.`);
+Running 'nitor help' will list available subcommands and provide some conceptual guides.`);
         break;
       }
 
       default: {
-        console.error(`nu: '${type}' is not a nu command. See 'nu help'.`);
+        console.error(`nitor: '${type}' is not a nitor command. See 'nitor help'.`);
 
         return;
       }
